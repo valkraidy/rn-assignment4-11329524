@@ -1,5 +1,5 @@
 import * as React from "react";
-import {StyleSheet, View, Image, Text} from "react-native";
+import {StyleSheet, View, Image, Text, TextInput} from "react-native";
 
 const LogIn = () => {
   	
@@ -12,11 +12,7 @@ const LogIn = () => {
           					<Image style={[styles.wifiIcon, styles.iconLayout]} resizeMode="cover" source="Wifi.png" />
           					<Image style={[styles.mobileSignalIcon, styles.iconLayout]} resizeMode="cover" source="Mobile Signal.png" />
         				</View>
-        				<View style={[styles.leftSide, styles.timeLayout]}>
-          					<View style={[styles.time, styles.timeLayout]}>
-            						<Text style={styles.text}>9:41</Text>
-          					</View>
-        				</View>
+        			 
       			</View>
       			<View style={[styles.homeIndicator, styles.homeIndicatorPosition]} />
       			<View style={[styles.statusBarIphoneXOrNewe, styles.homeIndicatorPosition]}>
@@ -26,31 +22,40 @@ const LogIn = () => {
           					<Image style={[styles.wifiIcon, styles.iconLayout]} resizeMode="cover" source="Wifi.png" />
           					<Image style={[styles.mobileSignalIcon, styles.iconLayout]} resizeMode="cover" source="Mobile Signal.png" />
         				</View>
-        				<View style={[styles.leftSide, styles.timeLayout]}>
+        				{/* <View style={[styles.leftSide, styles.timeLayout]}>
           					<View style={[styles.time, styles.timeLayout]}>
             						<Text style={styles.text1}>9:41</Text>
           					</View>
-        				</View>
+        				</View> */}
       			</View>
       			<Text style={[styles.haventAnAccountContainer, styles.orContinueWithTypo]}>
-        				<Text style={styles.haventAnAccount}>{`Haven’t an account? `}</Text>
+        				<Text style={styles.haventAnAccount}>{`Haven't an account? `}</Text>
         				<Text style={styles.register}>Register</Text>
       			</Text>
       			<View style={styles.headlineParent}>
         				<Text style={styles.headline}>Welcome Back 👋</Text>
-        				<Text style={styles.headline1}>Let’s log in. Apply to jobs!</Text>
+        				<Text style={styles.headline1}>Let's log in. Apply to jobs!</Text>
       			</View>
       			<View style={styles.buttonParent}>
         				<View style={[styles.button, styles.buttonLayout]}>
           					<Text style={styles.next}>Log in</Text>
         				</View>
+
         				<View style={[styles.rectangleParent, styles.rectangleLayout]}>
           					<View style={styles.groupChild} />
-          					<Text style={[styles.email, styles.nameClr]}>Email</Text>
+          					<TextInput
+							 style={[styles.email, styles.nameClr]}
+							 placeholder = "Email"
+							 />
         				</View>
+
         				<View style={[styles.rectangleGroup, styles.rectangleLayout]}>
           					<View style={styles.groupChild} />
-          					<Text style={[styles.name, styles.nameClr]}>Name</Text>
+							
+          					<TextInput
+							 style={[styles.name, styles.nameClr]}
+							 placeholder =  "Name"
+							 />
         				</View>
       			</View>
       			<View style={[styles.orContinueWithParent, styles.buttonLayout]}>
@@ -59,9 +64,23 @@ const LogIn = () => {
         				<View style={[styles.lineView, styles.lineViewLayout]} />
       			</View>
       			<View style={styles.groupParent}>
-        				<Image style={[styles.groupIcon, styles.groupChildLayout]} resizeMode="cover" source="Group 55.png" />
-        				<Image style={[styles.groupChild1, styles.groupChildLayout]} resizeMode="cover" source="Group 56.png" />
-        				<Image style={[styles.groupChild2, styles.groupChildLayout]} resizeMode="cover" source="Group 54.png" />
+        				
+
+        				<Image
+						 style={[styles.groupChild1, styles.groupChildLayout]}
+						  resizeMode="cover"
+						    source={require('../assets/google.png')} 
+						    />
+							<Image
+						 style={[styles.groupIcon, styles.groupChildLayout]} 
+						 resizeMode="cover"
+						  source={require('../assets/apple.png')} 
+						  />
+        				<Image
+						 style={[styles.groupChild2, styles.groupChildLayout]}
+						  resizeMode="cover"
+						    source={require('../assets/Vector.png')} 
+						    />
       			</View>
       			<Text style={styles.jobizz}>Jobizz</Text>
     		</View>);
@@ -83,8 +102,9 @@ const styles = StyleSheet.create({
     		position: "absolute"
   	},
   	orContinueWithTypo: {
-    		fontFamily: "Circular Std",
-    		textAlign: "center"
+    		
+    		textAlign: "center",
+			marginBottom:30
   	},
   	buttonLayout: {
     		width: 327,
@@ -109,8 +129,8 @@ const styles = StyleSheet.create({
     		position: "absolute"
   	},
   	groupChildLayout: {
-    		width: 56,
-    		height: 56,
+    		width: 30,
+    		height: 30,
     		top: 0,
     		position: "absolute"
   	},
@@ -142,7 +162,7 @@ const styles = StyleSheet.create({
     		width: 40,
     		textAlign: "center",
     		color: "#fff",
-    		fontFamily: "SF Pro Text",
+    		
     		fontWeight: "600",
     		lineHeight: 20,
     		letterSpacing: 0,
@@ -173,7 +193,7 @@ const styles = StyleSheet.create({
     		color: "#0d0d26",
     		width: 40,
     		textAlign: "center",
-    		fontFamily: "SF Pro Text",
+    		
     		fontWeight: "600",
     		lineHeight: 20,
     		letterSpacing: 0,
@@ -192,14 +212,14 @@ const styles = StyleSheet.create({
     		top: 694,
     		left: 102,
     		fontSize: 14,
-    		fontFamily: "Circular Std",
+    		
     		position: "absolute"
   	},
   	headline: {
     		fontSize: 24,
     		lineHeight: 34,
     		textAlign: "left",
-    		fontFamily: "Poppins-SemiBold",
+    		
     		letterSpacing: -0.4,
     		color: "#0d0d26",
     		fontWeight: "600",
@@ -210,7 +230,7 @@ const styles = StyleSheet.create({
   	headline1: {
     		top: 41,
     		lineHeight: 22,
-    		fontFamily: "Poppins-Regular",
+    		
     		opacity: 0.4,
     		letterSpacing: -0.1,
     		textAlign: "left",
@@ -230,7 +250,7 @@ const styles = StyleSheet.create({
     		fontSize: 16,
     		letterSpacing: -0.2,
     		lineHeight: 24,
-    		fontFamily: "Poppins-Medium",
+    		
     		fontWeight: "500",
     		textAlign: "center",
     		color: "#fff"
@@ -262,7 +282,7 @@ const styles = StyleSheet.create({
     		lineHeight: 21,
     		top: 15,
     		color: "#afb0b6",
-    		fontFamily: "Poppins-Medium",
+    		
     		fontWeight: "500",
     		letterSpacing: -0.1,
     		textAlign: "left",
@@ -277,7 +297,7 @@ const styles = StyleSheet.create({
     		lineHeight: 21,
     		top: 15,
     		color: "#afb0b6",
-    		fontFamily: "Poppins-Medium",
+    		
     		fontWeight: "500",
     		letterSpacing: -0.1,
     		textAlign: "left",
@@ -297,7 +317,7 @@ const styles = StyleSheet.create({
   	orContinueWith: {
     		left: 114,
     		fontSize: 13,
-    		fontFamily: "Circular Std",
+    	
     		textAlign: "center",
     		top: 0
   	},
@@ -333,7 +353,7 @@ const styles = StyleSheet.create({
     		left: -16,
     		fontSize: 22,
     		width: 150,
-    		fontFamily: "Poppins-SemiBold",
+    	
     		letterSpacing: -0.4,
     		color: "#356899",
     		textAlign: "center",
