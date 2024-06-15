@@ -1,10 +1,11 @@
 import * as React from "react";
-import {Text, StyleSheet, View, Image} from "react-native";
+import {Text, StyleSheet, View, Image, ScrollView} from "react-native";
 
 
 const Homepage = () => {
   	
   	return (
+		
     		<View style={styles.homepage}>
       			<View style={styles.headlineParent}>
         				<Text style={styles.headline}>eric@gmail.com</Text>
@@ -13,7 +14,9 @@ const Homepage = () => {
       			<Text style={[styles.featuredJobs, styles.featuredJobsTypo]}>Featured Jobs</Text>
       			<Text style={[styles.seeAll, styles.yearTypo]}>See all</Text>
       			<View style={[styles.greenBg, styles.greenBgPosition]} />
-      			<Image style={[styles.maskGroupIcon, styles.greenBgPosition]} resizeMode="cover" source="Mask Group.png" />
+      			{/* <Image style={[styles.maskGroupIcon, styles.greenBgPosition]} resizeMode="cover" 
+			 source={require('../assets/profile.png')}
+				 /> */}
       			<View style={styles.groupParent}>
         				<View style={styles.accraGhanaParent}>
           					<Text style={[styles.accraGhana, styles.textTypo]}>Accra, Ghana</Text>
@@ -30,18 +33,18 @@ const Homepage = () => {
       			<Text style={styles.seeAll1}>See all</Text>
       			<View style={styles.statusBarIphoneXOrNewe}>
         				<View style={styles.notch} />
-        				<View style={[styles.rightSide, styles.iconLayout]}>
+        				{/* <View style={[styles.rightSide, styles.iconLayout]}>
           					<Image style={[styles.batteryIcon, styles.iconLayout]} resizeMode="cover" source="Battery.png" />
           					<Image style={[styles.wifiIcon, styles.iconLayout]} resizeMode="cover" source="Wifi.png" />
           					<Image style={[styles.mobileSignalIcon, styles.iconLayout]} resizeMode="cover" source="Mobile Signal.png" />
-        				</View>
-        				<View style={[styles.leftSide, styles.timeLayout]}>
+        				</View> */}
+        				{/* <View style={[styles.leftSide, styles.timeLayout]}>
           					<View style={[styles.time, styles.timeLayout]}>
             						<Text style={styles.text1}>9:41</Text>
           					</View>
-        				</View>
+        				</View> */}
       			</View>
-      			<Image style={[styles.vectorIcon, styles.vectorIconLayout]} resizeMode="cover" source="Vector.png" />
+      			{/* <Image style={[styles.vectorIcon, styles.vectorIconLayout]} resizeMode="cover" source={require('../assets/profile.png')}  /> */}
       			<View style={[styles.rectangleParent, styles.searchPosition1]}>
         				<View style={[styles.groupItem, styles.componentLayout]} />
         				<Text style={[styles.jrExecutive, styles.fullTimeLayout]}>Jr Executive</Text>
@@ -54,22 +57,30 @@ const Homepage = () => {
           					<Text style={[styles.beats, styles.beatsPosition]}>Beats</Text>
           					<Text style={[styles.floridaUs, styles.beatsPosition]}>Florida, US</Text>
           					<Text style={[styles.y1, styles.yTypo]}>$84,000/y</Text>
-          					<Image style={[styles.image8Icon, styles.iconPosition]} resizeMode="cover" source="image 8.png" />
+          					<Image style={[styles.image8Icon, styles.iconPosition]} resizeMode="cover" source={require('../assets/image 8.png')}/>
         				</View>
-        				<Image style={styles.burgerKing41Icon} resizeMode="cover" source="burger-king-4 1.png" />
+        				<Image style={styles.burgerKing41Icon} resizeMode="cover" source={require('../assets/burger.png')} />
       			</View>
       			<View style={[styles.search, styles.searchPosition1]}>
         				<View style={[styles.searchChild, styles.searchPosition]} />
         				<View style={[styles.searchItem, styles.searchPosition]} />
         				<Text style={styles.searchAJob}>Search a job or position</Text>
-        				<Image style={[styles.search11Icon, styles.iconPosition]} resizeMode="cover" source="search.1 1.png" />
-        				<Image style={[styles.filter5Icon, styles.vectorIconLayout]} resizeMode="cover" source="filter.5.png" />
+        				<Image style={[styles.search11Icon, styles.iconPosition]} resizeMode="cover" 
+						
+						 source={require('../assets/search.png')} />
+        				<Image style={[styles.filter5Icon, styles.vectorIconLayout]} resizeMode="cover"
+						 source={require('../assets/Filter.png')} />
       			</View>
-      			<Image style={styles.ellipseIcon} resizeMode="cover" source="Ellipse.png" />
-      			<Image style={[styles.homepageChild, styles.homepageChildPosition]} resizeMode="cover" source="Ellipse 798.png" />
-      			<Image style={styles.homepageItem} resizeMode="cover" source="Ellipse 767.png" />
+      			<Image style={styles.ellipseIcon} resizeMode="cover"
+				//image 
+				 source={require('../assets/profile.png')}/>
+      			<Image style={[styles.homepageChild, styles.homepageChildPosition]} resizeMode="cover"
+				//small dot
+				 source={require('../assets/google.png')}
+				   />
+      			
       			<View style={[styles.homepageInner, styles.homepageInnerPosition]} />
-      			<Image style={styles.homepageInnerPosition} resizeMode="cover" source="Mask Group.png" />
+      			
       			<View style={[styles.groupContainer, styles.homepageChildPosition]}>
         				<View style={styles.texasParent}>
           					<Text style={[styles.texas, styles.textTypo1]}>Texas</Text>
@@ -86,8 +97,17 @@ const Homepage = () => {
         				<View style={[styles.juniorWrapper, styles.wrapperSpaceBlock]}>
           					<Text style={[styles.fullTime, styles.fullTimeLayout]}>Junior</Text>
         				</View>
-        				<Image style={styles.grommetIconsgoogle} resizeMode="cover" source="grommet-icons:google.png" />
-        				<Image style={styles.bookmark5} resizeMode="cover" source="bookmark.5.png" />
+        				<Image
+						 style={styles.grommetIconsgoogle}
+						  resizeMode="cover"  
+						 source={require('../assets/google.png')}
+						   />
+
+        				<Image 
+						style={styles.bookmark5}
+						 resizeMode="cover"
+						  source={require('../assets/google.png')}
+						   />
       			</View>
       			<View style={[styles.component2Wrapper, styles.componentLayout]}>
         				<View style={[styles.component2, styles.componentLayout]}>
@@ -98,19 +118,22 @@ const Homepage = () => {
           					<Text style={[styles.y1, styles.yTypo]}>$86,000/y</Text>
         				</View>
       			</View>
-      			<Image style={[styles.vectorIcon1, styles.vectorIconLayout]} resizeMode="cover" source="Vector.png" />
-    		</View>);
+				
+      			
+    		</View>
+			
+			);
 };
 
 const styles = StyleSheet.create({
   	featuredJobsTypo: {
-    		fontFamily: "Poppins-SemiBold",
+    		
     		fontSize: 16,
     		fontWeight: "600",
     		letterSpacing: -0.2
   	},
   	yearTypo: {
-    		fontFamily: "Circular Std",
+    		
     		lineHeight: 17,
     		fontSize: 14
   	},
@@ -122,7 +145,7 @@ const styles = StyleSheet.create({
     		position: "absolute"
   	},
   	textTypo: {
-    		fontFamily: "Poppins-Medium",
+    		
     		letterSpacing: -0.1
   	},
   	facebookPosition: {
@@ -180,14 +203,14 @@ const styles = StyleSheet.create({
     		letterSpacing: -0.1,
     		lineHeight: 21,
     		color: "#0d0d26",
-    		fontFamily: "Poppins-Regular",
+    		
     		position: "absolute"
   	},
   	yTypo: {
     		lineHeight: 19,
     		fontSize: 12,
     		textAlign: "right",
-    		fontFamily: "Poppins-Medium",
+    		
     		fontWeight: "500",
     		letterSpacing: -0.1,
     		color: "#0d0d26",
@@ -204,7 +227,7 @@ const styles = StyleSheet.create({
     		letterSpacing: -0.1,
     		lineHeight: 21,
     		color: "#0d0d26",
-    		fontFamily: "Poppins-Regular",
+    		
     		position: "absolute"
   	},
   	iconPosition: {
@@ -224,7 +247,9 @@ const styles = StyleSheet.create({
   	},
   	homepageChildPosition: {
     		left: 338,
-    		position: "absolute"
+    		position: "absolute",
+			color:"red"
+
   	},
   	homepageInnerPosition: {
     		left: 314,
@@ -241,7 +266,7 @@ const styles = StyleSheet.create({
   	googlePosition: {
     		left: 64,
     		color: "#fff",
-    		fontFamily: "Circular Std",
+    		
     		textAlign: "left",
     		position: "absolute"
   	},
@@ -260,7 +285,7 @@ const styles = StyleSheet.create({
     		letterSpacing: -0.3,
     		textAlign: "left",
     		color: "#95969d",
-    		fontFamily: "Poppins-Regular",
+    		
     		lineHeight: 24,
     		left: 0,
     		width: 254,
@@ -269,7 +294,7 @@ const styles = StyleSheet.create({
   	headline1: {
     		fontSize: 24,
     		lineHeight: 36,
-    		fontFamily: "Poppins-Bold",
+    		
     		display: "flex",
     		alignItems: "center",
     		color: "#0d0d26",
@@ -290,7 +315,7 @@ const styles = StyleSheet.create({
   	},
   	featuredJobs: {
     		lineHeight: 21,
-    		fontFamily: "Poppins-SemiBold",
+    		
     		fontSize: 16,
     		top: 251,
     		color: "#0d0d26",
@@ -301,7 +326,7 @@ const styles = StyleSheet.create({
   	seeAll: {
     		left: 309,
     		top: 251,
-    		fontFamily: "Circular Std",
+    		
     		textAlign: "left",
     		color: "#95969d",
     		position: "absolute"
@@ -335,7 +360,7 @@ const styles = StyleSheet.create({
     		top: 2,
     		textAlign: "left",
     		lineHeight: 24,
-    		fontFamily: "Poppins-Medium"
+    		
   	},
   	text: {
     		textAlign: "right",
@@ -345,7 +370,7 @@ const styles = StyleSheet.create({
     		fontSize: 15,
     		top: 0,
     		lineHeight: 24,
-    		fontFamily: "Poppins-Medium",
+    	
     		left: 0
   	},
   	accraGhanaParent: {
@@ -357,7 +382,7 @@ const styles = StyleSheet.create({
   	},
   	softwareEngineer: {
     		top: 2,
-    		fontFamily: "Poppins-SemiBold",
+    	
     		fontSize: 16,
     		fontWeight: "600",
     		letterSpacing: -0.2,
@@ -369,7 +394,7 @@ const styles = StyleSheet.create({
     		lineHeight: 21,
     		textAlign: "left",
     		position: "absolute",
-    		fontFamily: "Poppins-Medium",
+    	
     		letterSpacing: -0.1
   	},
   	groupChild: {
@@ -404,7 +429,7 @@ const styles = StyleSheet.create({
   	popularJobs: {
     		left: 26,
     		top: 520,
-    		fontFamily: "Poppins-SemiBold",
+    		
     		fontWeight: "600",
     		lineHeight: 21,
     		fontSize: 16,
@@ -421,7 +446,7 @@ const styles = StyleSheet.create({
     		lineHeight: 21,
     		textAlign: "left",
     		color: "#95969d",
-    		fontFamily: "Poppins-Regular",
+    		
     		position: "absolute"
   	},
   	notch: {
@@ -453,7 +478,7 @@ const styles = StyleSheet.create({
     		left: 7,
     		letterSpacing: 0,
     		lineHeight: 20,
-    		fontFamily: "SF Pro Text",
+    		
     		color: "#000",
     		width: 40,
     		textAlign: "center",
@@ -500,7 +525,7 @@ const styles = StyleSheet.create({
     		top: 16,
     		fontSize: 14,
     		lineHeight: 18,
-    		fontFamily: "Poppins-SemiBold",
+    		
     		fontWeight: "600",
     		color: "#0d0d26",
     		position: "absolute"
@@ -541,7 +566,7 @@ const styles = StyleSheet.create({
     		lineHeight: 18,
     		letterSpacing: -0.1,
     		fontSize: 14,
-    		fontFamily: "Poppins-SemiBold",
+    		
     		fontWeight: "600",
     		color: "#0d0d26",
     		position: "absolute"
@@ -601,7 +626,7 @@ const styles = StyleSheet.create({
     		fontSize: 15,
     		textAlign: "left",
     		color: "#95969d",
-    		fontFamily: "Poppins-Regular",
+    		
     		position: "absolute"
   	},
   	search11Icon: {
@@ -634,7 +659,8 @@ const styles = StyleSheet.create({
   	homepageChild: {
     		top: 76,
     		width: 16,
-    		height: 16
+    		height: 16,
+			color:'#000000'
   	},
   	homepageItem: {
     		top: 80,
@@ -650,7 +676,7 @@ const styles = StyleSheet.create({
   	texas: {
     		left: 196,
     		color: "#fff",
-    		fontFamily: "Circular Std",
+    		
     		lineHeight: 17,
     		fontSize: 14,
     		top: 0,
@@ -659,7 +685,7 @@ const styles = StyleSheet.create({
   	year: {
     		textAlign: "right",
     		color: "#fff",
-    		fontFamily: "Circular Std",
+    	
     		lineHeight: 17,
     		fontSize: 14,
     		top: 0,
@@ -695,7 +721,7 @@ const styles = StyleSheet.create({
     		textAlign: "center",
     		color: "#fff",
     		lineHeight: 18,
-    		fontFamily: "Poppins-Regular"
+    		
   	},
   	fullTimeWrapper: {
     		left: 78

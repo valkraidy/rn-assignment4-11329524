@@ -1,17 +1,20 @@
-import * as React from "react";
-import {StyleSheet, View, Image, Text, TextInput} from "react-native";
 
-const LogIn = () => {
+import * as React from "react";
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import {StyleSheet, View, Image, Text, TextInput, TouchableOpacity} from "react-native";
+
+const LogIn = ({navigation}) => {
+
   	
   	return (
     		<View style={styles.logIn}>
       			<View style={[styles.statusBarIphoneXOrNewe, styles.homeIndicatorPosition]}>
         				<View style={styles.notch} />
-        				<View style={[styles.rightSide, styles.iconLayout]}>
+        				{/* <View style={[styles.rightSide, styles.iconLayout]}>
           					<Image style={[styles.batteryIcon, styles.iconLayout]} resizeMode="cover" source="Battery.png" />
           					<Image style={[styles.wifiIcon, styles.iconLayout]} resizeMode="cover" source="Wifi.png" />
           					<Image style={[styles.mobileSignalIcon, styles.iconLayout]} resizeMode="cover" source="Mobile Signal.png" />
-        				</View>
+        				</View> */}
         			 
       			</View>
       			<View style={[styles.homeIndicator, styles.homeIndicatorPosition]} />
@@ -29,7 +32,7 @@ const LogIn = () => {
         				</View> */}
       			</View>
       			<Text style={[styles.haventAnAccountContainer, styles.orContinueWithTypo]}>
-        				<Text style={styles.haventAnAccount}>{`Haven't an account? `}</Text>
+        				<Text style={styles.haventAnAccount}>Haven't an account?</Text>
         				<Text style={styles.register}>Register</Text>
       			</Text>
       			<View style={styles.headlineParent}>
@@ -37,9 +40,14 @@ const LogIn = () => {
         				<Text style={styles.headline1}>Let's log in. Apply to jobs!</Text>
       			</View>
       			<View style={styles.buttonParent}>
+					<TouchableOpacity
+					onPress={()=>navigation.navigate('Home')}
+					
+					>
         				<View style={[styles.button, styles.buttonLayout]}>
           					<Text style={styles.next}>Log in</Text>
         				</View>
+						</TouchableOpacity>
 
         				<View style={[styles.rectangleParent, styles.rectangleLayout]}>
           					<View style={styles.groupChild} />
@@ -104,7 +112,7 @@ const styles = StyleSheet.create({
   	orContinueWithTypo: {
     		
     		textAlign: "center",
-			marginBottom:30
+			
   	},
   	buttonLayout: {
     		width: 327,
@@ -203,7 +211,8 @@ const styles = StyleSheet.create({
     		position: "absolute"
   	},
   	haventAnAccount: {
-    		color: "#bdbec2"
+    		color: "#bdbec2",
+			top:'-30'
   	},
   	register: {
     		color: "#356899"
@@ -363,8 +372,8 @@ const styles = StyleSheet.create({
   	logIn: {
     		backgroundColor: "#fafafd",
     		flex: 1,
-    		width: "100%",
-    		height: 812,
+    		width:wp('100%'),
+    		height:hp('100%'),
     		overflow: "hidden"
   	}
 });
